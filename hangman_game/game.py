@@ -10,8 +10,8 @@ O que vai ser repassado nesse desafio:
 -Strings e exibição no console
 -Fluxo de controle e condições
 -Laços de repetição (For e While)
--Funções x Métodos
--Vazamento de escopo - Não tem nada disso :/
+-Funções
+-Vazamento de escopo
 
 Como padrão, o nome de variáveis, classes e funções estão em INGLÊS; porém os comentários e "tarefas" estão em
 PORTUGUÊS para facilitar o entedimento.
