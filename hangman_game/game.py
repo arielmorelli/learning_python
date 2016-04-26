@@ -18,11 +18,13 @@ PORTUGUÊS para facilitar o entedimento.
 
 """
 
+
+# TODO: importar a classe HangmanGame
+
 import os
 import string
 import sys
 
-# TODO: importar a classe HangmanGame
 
 base_dict = dict()
 base_dict['monica'] = 'Famosa personagem de Mauricio de Sousa'
@@ -36,8 +38,10 @@ base_dict['onibus'] = 'Veículo comum em cidades'
 
 
 def run_game():
-    """ Os TODOs são apenas para facilitar,sintam-se a vontade para criar o código como quiserem """
-
+    """
+    Os TODOs são para facilitar o desenvolvimente,
+    sintam-se a vontade para criar o código do jeito que acharem melhor
+    """
     raise NotImplemented('Não foi implementado ainda!')
 
     # Variáveis 'word' e 'clue'= # TODO: escolher uma das opções do dicionário de opções e salvar sua chave e valor em variáveis
@@ -65,8 +69,10 @@ def run_game():
     sys.exit(0)  # acabou como queriamos
 
 
-def print_current_round(current_game, list_of_letters):
-    """Print the game itself."""
+def print_current_round(current_game):
+    """ Print the game itself
+    :param current_game: the game that will be printed
+    """
     os.system('clear')
     print "Dica:", current_game.clue
 
@@ -76,12 +82,13 @@ def print_current_round(current_game, list_of_letters):
     print 'aqui vai o espaço de letras já reveladas e não reveladas'
 
     # TODO: imprimir todas as letras já tentadas
-    print 'aqui vai a lista de letras que já foram tentadas', list_of_letters
+    print 'aqui vai a lista de letras que já foram tentadas' # pular uma linha
 
 
 def read_one_char():
-    """Return a valid asciii character."""
-
+    """Return a valid asciii character.
+    :return String: char
+    """
     char = raw_input('Letra:')
     while len(char) > 1 or char not in string.ascii_letters:
         print 'Valor inválido. Por favor digiter uma letra sem nenhum tipo de acentuação. Valor digitado:', char
