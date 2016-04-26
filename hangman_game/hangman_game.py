@@ -13,17 +13,18 @@ class HangmanGame(object):
         :param letter: letter that will be analyzed
         :return bool: return if the word has letter or no
         """
-        # TODO: escrever o código verifica se existe a letra na palavra a ser adivinhada.
-        # Caso existe, retorne True, caso contrário, False
-
-        raise NotImplemented('método "has_letter" não foi implementado ainda!')
+        return letter in self.word
 
     def is_over(self):
         """Verify if the game is over
         :return bool: return if game is over or no
         """
-        # TODO: Verificar se todas as letras foram descobertas ou as vidas restantes chegaram a 0
-        raise NotImplemented('método "is_over" não foi implementado ainda!')
+        if self.lives == 0:
+            return True
+        elif not set(self.word)-set(self.list_of_letters):
+            return True
+        else:
+            return False
 
     def get_stage_draw(self):
         """List of draws
