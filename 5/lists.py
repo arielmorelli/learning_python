@@ -82,8 +82,23 @@ print 'new_list_1 + new_list_2 -> ', new_list_1 + new_list_2
 
 print '\n------------------------------------------------------------\n'
 
-delete
+print 'Erasing values'
+print '-->remove:'
+new_list = ['a', 'b', 'c', 'd', 'e']
+print new_list
+new_list.remove('c')
+print "new_list.remove('c') -> ", new_list
 
+print '-->pop:'
+new_list = ['a', 'b', 'c', 'd', 'e']
+print new_list
+new_list.pop(1)
+print "new_list.pop(1) -> ", new_list
+
+# Removing values inside for
+
+
+print help(list)
 print '\n------------------------------------------------------------\n'
 
 repetition
