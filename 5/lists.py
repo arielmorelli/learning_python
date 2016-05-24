@@ -58,6 +58,9 @@ print "new_list[1] = 'new_value' -> ", new_list
 print '\n------------------------------------------------------------\n'
 
 print 'Appending values - append, insert, concat:'
+# Diff:
+# Append, insert: no return
+# Concat: has return, create a new list
 print '\n-->Append:'
 new_list = ['a', 'b', 'c', 'd', 'e']
 print new_list
@@ -82,19 +85,95 @@ print 'new_list_1 + new_list_2 -> ', new_list_1 + new_list_2
 
 print '\n------------------------------------------------------------\n'
 
-delete
+print 'Delete elements:'
+print '\n-->remove(x)'
+new_list = ['a', 'b', 'c', 'd', 'e', 'b']
+print new_list
+new_list.remove('b')
+print "new_list.remove('b') -> ", new_list
+
+print '\n-->pop()'
+new_list = ['a', 'b', 'c', 'd', 'e']
+print new_list
+new_list.pop()
+print "new_list.pop() -> ", new_list
+
+print '\n-->pop(index)'
+new_list = ['a', 'b', 'c', 'd', 'e']
+print new_list
+new_list.pop(3)
+print "new_list.pop(3) -> ", new_list
+
+print '\n-->using del'
+new_list = ['a', 'b', 'c', 'd', 'e']
+print new_list
+del new_list[1]
+print "del new_list[1] -> ", new_list
 
 print '\n------------------------------------------------------------\n'
 
-repetition
+print 'Repetition:'
+new_list = ['a']
+print new_list
+print "new_list*3 -> ", new_list*3
 
 print '\n------------------------------------------------------------\n'
 
-membership
+print 'Looking for a element:'
+print '\n-->Using in:'
+new_list = ['a', 'b', 'c', 'd', 'e']
+print "'a' in new_list-> ", new_list
+
+print '\n-->Using index:'
+new_list = ['a', 'b', 'c', 'd', 'e']
+print "new_list.index('c') -> ", new_list.index('c')
+
+print '\n-->Using index when not exist:'
+new_list = ['a', 'b', 'c', 'd', 'e']
+try:
+    print "new_list.index('z') -> ", new_list.index('z')
+except Exception as e:
+    print e
+
+print '\n-->Using count:'
+new_list = ['a', 'b', 'c', 'd', 'e']
+print "new_list.count('a') -> ", new_list.count('a')
 
 print '\n------------------------------------------------------------\n'
 
-iteration
+print 'Iterating (summing + 10):'
 
-print '\n------------------------------------------------------------\n'
+print '\n-->Using for + len:'
+new_list = [1, 2, 3] 
+for index in range(len(new_list)):
+    print new_list[index] + 1
+
+print '\n-->Using for:'
+new_list = [1, 2, 3] 
+for elem in new_list:
+    print elem + 1
+
+print '\n-->The pythonic way'
+print [elem+1 for elem in new_list]
+
+print '\n------------------------------------------------------------'
+print '------------------------------------------------------------'
+print '------------------------------------------------------------'
+print '------------------------------------------------------------'
+print '------------------------------------------------------------\n'
+
+print 'But, how do I remove elements durint a iteraction?'
+
+print '\n-->Using while + del:'
+new_list = ['a', 'b', 'a', 'c', 'a', 'd'] 
+while 'a' in new_list:
+    new_list.remove('a')
+print new_list
+
+print '\n-->Using reversed:'
+new_list = ['a', 'b', 'a', 'c', 'a', 'd']
+for elem in reversed(new_list):
+    if elem == 'a':
+        new_list.remove(elem)
+print new_list
 
