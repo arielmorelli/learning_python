@@ -24,13 +24,15 @@ except Exception as e:
 print '''
 Creating a file:
 file_handler = open('/tmp/example.txt', 'w')
+file_handler.write('Hello from file!\n')
+file_handler.write('This is the second line.')
 '''
 
 file_handler = open('/tmp/example.txt', 'w')
 file_handler.write('Hello from file!\n')
 file_handler.write('This is the second line.')
 
-print ''''
+print '''
 Closing handler.
 file_handler.close()
 '''
