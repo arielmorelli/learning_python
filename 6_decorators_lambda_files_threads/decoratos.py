@@ -11,10 +11,10 @@ What we should know before learn decorators:
 '''
 
 print '''
-Assign functions of variables'
+Assign functions of variables
 
 def greet(name):
-        return "Hello "+name
+        return "Hello {}".format(name)
 
         greet_someone = greet
         print greet_someone("John")
@@ -34,9 +34,9 @@ Define functions inseide functions
 
 def greet(name):
     def get_message():
-        return "Hello "
+        return "Hello {}".format(name)
 
-    result = get_message()+name
+    result = get_message()
     return result
 
 print greet("John")
@@ -57,7 +57,7 @@ print '''
 Send functions as parameters
 
 def greet(name):
-   return "Hello " + name 
+    return "Hello {}".format(name)
 
 def call_func(func):
     other_name = "John"
